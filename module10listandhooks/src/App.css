@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.main {
+    padding: 30px;
+    background: rgb(181, 146, 4) 0%;
+    border: 10px solid rgb(2, 83, 70);
+    line-height: 2rem;
+    min-height: 92vh;
+}
+
+h4 {
+    color: rgb(234, 68, 234);
+}
+
+h2 {
+    color: rgb(240, 37, 37);
+}
+
+h1 {
+    color: rgb(106, 8, 192);
+}
+
+.hr {
+    border: 2px solid black;
+}

@@ -1,0 +1,67 @@
+import React, { Component } from 'react';
+
+class ExampleOfUpdating extends Component {
+    constructor(props) {
+        super(props);
+        this.state = { favoriteFood: 'Mexican' };
+    }
+
+    shouldComponentUpdate(nextProps, nextState) {
+        return this.state.favoriteFood !== nextState.favoriteFood;
+    }
+
+    changeFood = () => {
+        this.setState({ favoriteFood: 'Italian' });
+    }
+
+    render() {
+        return (
+            <>
+                <div>
+                    <h1 className='my-5 text-center'>Example of "shouldComponentUpdate"</h1>
+                    <p className='text-center'>ComponentUpdate after <strong>"click"</strong> on button</p>
+                    <h3 className='my-5 text-center'>My Favorite Food is <span className='text-danger'>"{this.state.favoriteFood}"</span></h3>
+                    <div className="text-center my-5">
+                        <button className='btn btn-primary' type="button" onClick={this.changeFood}>Change food</button>
+                    </div>
+                    <hr className='border border-dark border-2 opacity-100' />
+
+                    <h2 className='my-3'>The Syntax is :- </h2>
+                    <code className='text-dark'>
+                        class ExampleOfUpdating extends Component &#123; <br />
+                        &nbsp; constructor(props) &#123; <br />
+                        &nbsp;&nbsp; super(props); <br />
+                        &nbsp;&nbsp; this.state = &#123;favoriteFood: 'Mexican' &#125;; <br />
+                        &nbsp; &#125; <br />
+                        shouldComponentUpdate(nextProps, nextState) &#123; <br />
+                        &nbsp;&nbsp; return this.state.favoriteFood !== nextState.favoriteFood; <br />
+                        &nbsp; &#125; <br />
+                        changeFood = () =&gt; &#123; <br />
+                        &nbsp; this.setState(&#123; favoriteFood: 'Italian' &#125;); <br />
+                        &nbsp; &#125; <br />
+                        render() &#123; <br />
+                        &nbsp; return ( <br />
+                        &nbsp; &lt;&gt; <br />
+                        &nbsp;&nbsp; &lt;div&gt; <br />
+                        &nbsp;&nbsp;&nbsp;&nbsp; &lt;h1 className='my-5  text-center'&gt;Example of "shouldComponentUpdate"&lt;/h1&gt; <br />
+                        &nbsp;&nbsp;&nbsp;&nbsp; &lt;p className='text-center'&gt;shouldComponentUpdate after &lt;strong&gt;"click"&lt;/strong&gt; on button&lt;/p&gt; <br />
+                        &nbsp;&nbsp;&nbsp;&nbsp; &lt;h3 className='my-5  text-center'&gt;My Favorite Food is <br />
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   &lt;span className='text-danger'&gt;"&#123;this.state.favoriteFood&#125;" &lt;/span&gt; &lt;/h3&gt; <br />
+                        &nbsp;&nbsp;&nbsp;&nbsp; &lt;button className='btn btn-primary' type="button" onClick=&#123;this.changeFood&#125;&gt;Change food&lt;/button&gt; <br />
+                        &nbsp;&nbsp;&nbsp;&nbsp; &lt;hr className='border border-dark border-2 opacity-100' /&gt; <br />
+                        &nbsp;&nbsp;&nbsp;&nbsp; &lt;h2 className='my-3'&gt;The Syntax is :- &lt;/h2&gt; <br />
+                        &nbsp;&nbsp; &lt;/div&gt; <br />
+                        &nbsp; &lt;/&gt; <br />
+                        &nbsp;&nbsp;&nbsp; ); <br />
+                        &nbsp;&nbsp; &#125; <br />
+                        &nbsp; &#125; <br />
+
+                        export default ExampleOfUpdating;
+                    </code>
+                </div>
+            </>
+        );
+    }
+}
+
+export default ExampleOfUpdating;
